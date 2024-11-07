@@ -1,0 +1,477 @@
+global proc shelf_Jmvs_Modelling () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Github_url" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Repo" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "C:/Docs/maya/scripts/JmvsShelf_Rigging/images/github-logo.png" 
+        -image1 "C:/Docs/maya/scripts/JmvsShelf_Rigging/images/github-logo.png" 
+        -style "iconOnly" 
+        -marginWidth 0
+        -marginHeight 1
+        -command "import webbrowser\nwebbrowser.open(\"https://github.com/JamesV-S/JmvsShelf_Rigging\")" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    separator
+        -enable 1
+        -width 34
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -backgroundColor 0 0 0
+        -highlightColor 0.321569 0.521569 0.65098 
+        -style "shelf" 
+        -horizontal 0
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Add_prefix" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Add_pref" 
+        -overlayLabelColor 0.0384667 1 0 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "addBookmark.png" 
+        -image1 "addBookmark.png" 
+        -style "iconOnly" 
+        -marginWidth 0
+        -marginHeight 1
+        -command "\nimport sys\nimport importlib\n\nfrom Jmvs_letter_driver_script import find_driver_letter_modelling\nimportlib.reload(find_driver_letter_modelling)\n\nA_driver = find_driver_letter_modelling.get_folder_letter(\"Jmvs_current_file_path_modelling\")\ncustom_path = f'{A_driver}JmvsShelfTools_Modelling/JmvsM_PYQT_scripts'\nprint(f\"module imported from {custom_path}\")\nsys.path.append(custom_path)\n#-----------------------------\n\nimport JmvsM_UIsetup_Addprefix_tool\nimportlib.reload(JmvsM_UIsetup_Addprefix_tool)\nJmvsM_UIsetup_Addprefix_tool.main()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Remove_prefix" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Remove_prefix" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Rmv_pref" 
+        -overlayLabelColor 1 0 0 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "noAccess.png" 
+        -image1 "noAccess.png" 
+        -style "iconOnly" 
+        -marginWidth 0
+        -marginHeight 1
+        -command "\nimport sys\nimport importlib\n\nfrom Jmvs_letter_driver_script import find_driver_letter_modelling\nimportlib.reload(find_driver_letter_modelling)\n\nA_driver = find_driver_letter_modelling.get_folder_letter(\"Jmvs_current_file_path_modelling\")\ncustom_path = f'{A_driver}JmvsShelfTools_Modelling/JmvsM_PYQT_scripts'\nprint(f\"module imported from {custom_path}\")\nsys.path.append(custom_path)\n#---------------------------\n\nimport JmvsM_UIsetup_Removeprefix_tool\nimportlib.reload(JmvsM_UIsetup_Removeprefix_tool)\nJmvsM_UIsetup_Removeprefix_tool.main()\n\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "match_transform" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "MT" 
+        -overlayLabelColor 1 0.5792 0 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "E:/JmvsShelfTools_Modelling/logo_cog.jpeg" 
+        -image1 "E:/JmvsShelfTools_Modelling/logo_cog.jpeg" 
+        -style "iconOnly" 
+        -marginWidth 0
+        -marginHeight 1
+        -command "\nimport sys\nimport importlib\n\nfrom Jmvs_letter_driver_script import find_driver_letter_modelling\nimportlib.reload(find_driver_letter_modelling)\n\nA_driver = find_driver_letter_modelling.get_folder_letter(\"Jmvs_current_file_path_modelling\")\ncustom_path = f'{A_driver}JmvsShelfTools_Modelling'\nprint(f\"module imported from {custom_path}\")\nsys.path.append(custom_path)\n#-----------------------------\n\nimport JmvsM_mTrans\nimportlib.reload(JmvsM_mTrans)\nJmvsM_mTrans.matchsTransform()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "rename_match_transform" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "RnmMT" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "E:/JmvsShelfTools_Modelling/logo_cog.jpeg" 
+        -image1 "E:/JmvsShelfTools_Modelling/logo_cog.jpeg" 
+        -style "iconOnly" 
+        -marginWidth 0
+        -marginHeight 1
+        -command "\nimport sys\nimport importlib\n\nfrom Jmvs_letter_driver_script import find_driver_letter_modelling\nimportlib.reload(find_driver_letter_modelling)\n\nA_driver = find_driver_letter_modelling.get_folder_letter(\"Jmvs_current_file_path_modelling\")\ncustom_path = f'{A_driver}JmvsShelfTools_Modelling'\nprint(f\"module imported from {custom_path}\")\nsys.path.append(custom_path)\n#-----------------------------\n\nimport JmvsM_rename_mTrans_02\nimportlib.reload(JmvsM_rename_mTrans_02)\nJmvsM_rename_mTrans_02.rnm_mTrans()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "select_hierarchy" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "sl_Hi" 
+        -overlayLabelColor 0 1 1 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "E:/JmvsShelfTools_Modelling/logo_cog.jpeg" 
+        -image1 "E:/JmvsShelfTools_Modelling/logo_cog.jpeg" 
+        -style "iconOnly" 
+        -marginWidth 0
+        -marginHeight 1
+        -command "\nimport sys\nimport importlib\n\nfrom Jmvs_letter_driver_script import find_driver_letter_modelling\nimportlib.reload(find_driver_letter_modelling)\n\nA_driver = find_driver_letter_modelling.get_folder_letter(\"Jmvs_current_file_path_modelling\")\ncustom_path = f'{A_driver}JmvsShelfTools_Modelling'\nprint(f\"module imported from {custom_path}\")\nsys.path.append(custom_path)\n#-----------------------------\n\nimport JmvsM_slHi\nimportlib.reload(JmvsM_slHi)\nJmvsM_slHi.selectHi()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "freeze_all_transforms" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Frz_all" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "FreezeTransform.png" 
+        -image1 "FreezeTransform.png" 
+        -style "iconOnly" 
+        -marginWidth 0
+        -marginHeight 1
+        -command "\nimport sys\nimport importlib\n\nfrom Jmvs_letter_driver_script import find_driver_letter_modelling\nimportlib.reload(find_driver_letter_modelling)\n\nA_driver = find_driver_letter_modelling.get_folder_letter(\"Jmvs_current_file_path_modelling\")\ncustom_path = f'{A_driver}JmvsShelfTools_Modelling'\nprint(f\"module imported from {custom_path}\")\nsys.path.append(custom_path)\n#-----------------------------\n\nimport JmvsM_Frz_trans\nimportlib.reload(JmvsM_Frz_trans)\nJmvsM_Frz_trans.freeze_tans()\n\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Freeze_rotations_only" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Frz_rot" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "freezeSelected.png" 
+        -image1 "freezeSelected.png" 
+        -style "iconOnly" 
+        -marginWidth 0
+        -marginHeight 1
+        -command "\nimport sys\nimport importlib\n\nfrom Jmvs_letter_driver_script import find_driver_letter_modelling\nimportlib.reload(find_driver_letter_modelling)\n\nA_driver = find_driver_letter_modelling.get_folder_letter(\"Jmvs_current_file_path_modelling\")\ncustom_path = f'{A_driver}JmvsShelfTools_Modelling'\nprint(f\"module imported from {custom_path}\")\nsys.path.append(custom_path)\n#-----------------------------\n\nimport JmvsM_Frz_rot\nimportlib.reload(JmvsM_Frz_rot)\nJmvsM_Frz_rot.freeze_rot()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Display_cv_on_curves" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "dispCV" 
+        -overlayLabelColor 1 1 0 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "E:/JmvsShelfTools_Modelling/logo_cog.jpeg" 
+        -image1 "E:/JmvsShelfTools_Modelling/logo_cog.jpeg" 
+        -style "iconOnly" 
+        -marginWidth 0
+        -marginHeight 1
+        -command "\nimport sys\nimport importlib\n\nfrom Jmvs_letter_driver_script import find_driver_letter_modelling\nimportlib.reload(find_driver_letter_modelling)\n\nA_driver = find_driver_letter_modelling.get_folder_letter(\"Jmvs_current_file_path_modelling\")\ncustom_path = f'{A_driver}JmvsShelfTools_Modelling'\nprint(f\"module imported from {custom_path}\")\nsys.path.append(custom_path)\n#-----------------------------\n\nimport JmvsM_dispCV\nimportlib.reload(JmvsM_dispCV)\nJmvsM_dispCV.displayCVs()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Linear_crv_to_geo" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CV>Geo" 
+        -overlayLabelColor 1 0.3668 0 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "linearLight.open.svg" 
+        -image1 "linearLight.open.svg" 
+        -style "iconOnly" 
+        -marginWidth 0
+        -marginHeight 1
+        -command "\nimport sys\nimport importlib\n\nfrom Jmvs_letter_driver_script import find_driver_letter_modelling\nimportlib.reload(find_driver_letter_modelling)\n\nA_driver = find_driver_letter_modelling.get_folder_letter(\"Jmvs_current_file_path_modelling\")\ncustom_path = f'{A_driver}JmvsShelfTools_Modelling/JmvsM_PYQT_scripts'\nprint(f\"module imported from {custom_path}\")\nsys.path.append(custom_path)\n#---------------------------\n\nimport JmvsM_UIsetup_linear_crv_to_geo\nimportlib.reload(JmvsM_UIsetup_linear_crv_to_geo)\nJmvsM_UIsetup_linear_crv_to_geo.main()\n\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "type the name of a python file and the output will be its file path" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Get_PY_file_path" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PY_path" 
+        -overlayLabelColor 0.0830325 0.0830325 0.0830325 
+        -overlayLabelBackColor 1 1 1 0.5 
+        -image "zoom.png" 
+        -image1 "zoom.png" 
+        -style "iconOnly" 
+        -marginWidth 0
+        -marginHeight 1
+        -command "\nimport sys\nimport importlib\n\nfrom Jmvs_letter_driver_script import find_driver_letter\nimportlib.reload(find_driver_letter)\n\nA_driver = find_driver_letter.get_folder_letter(\"Jmvs_current_file_path_modelling\")\ncustom_path = f'{A_driver}JmvsShelfTools_Modelling/JmvsM_PYQT_scripts'\nprint(f\"module imported from {custom_path}\")\nsys.path.append(custom_path)\n#-----------------------------\n\nimport JmvsM_Get_module_path_PYQT\nimportlib.reload(JmvsM_Get_module_path_PYQT)\nJmvsM_Get_module_path_PYQT.main()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "EditPoiunt_curve_tool" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "EP_crv" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "curveEP.png" 
+        -image1 "curveEP.png" 
+        -style "iconOnly" 
+        -marginWidth 0
+        -marginHeight 1
+        -command "EPCurveTool\n" 
+        -sourceType "mel" 
+        -doubleClickCommand "EPCurveToolOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates purple locator at the centre of selected edges!" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "edge_centre_pivot" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "LocEdge" 
+        -overlayLabelColor 0.802 0 0.802 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "E:/Logo/logo_cog.jpeg" 
+        -image1 "E:/Logo/logo_cog.jpeg" 
+        -style "iconOnly" 
+        -marginWidth 0
+        -marginHeight 1
+        -command "\nimport sys\nimport importlib\n\nfrom Jmvs_letter_driver_script import find_driver_letter\nimportlib.reload(find_driver_letter)\n\nA_driver = find_driver_letter.get_folder_letter(\"Jmvs_current_file_path_modelling\")\ncustom_path = f'{A_driver}JmvsShelfTools_Modelling'\nprint(f\"module imported from {custom_path}\")\nsys.path.append(custom_path)\n#-----------------------------\n\nimport JmvsM_centre_ede_loc\nimportlib.reload(JmvsM_centre_ede_loc)\nJmvsM_centre_ede_loc.create_locator_at_edge_center()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 
